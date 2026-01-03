@@ -32,7 +32,7 @@ module "tls_private_key" {
 ## Requirements
 This module requires Terraform 1.13 or later, and the following provider:
 
-github version = ~> 6.0
+github version = ~> 6.9
 
 ## License
 This module is licensed under the MIT License. See the LICENSE file for details.
