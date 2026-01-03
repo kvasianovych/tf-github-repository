@@ -9,6 +9,16 @@ resource "github_repository" "this" {
   auto_init  = true
 }
 
+resource "github_branch" "default" {
+  repository = github_repository.this.name
+  branch     = var.default_branch
+}
+
+resource "github_branch_default" "default" {
+  repository = github_repository.this.name
+  branch     = github_branch.default.branch
+}
+
 resource "github_repository_deploy_key" "this" {
   title      = var.public_key_openssh_title
   repository = github_repository.this.name

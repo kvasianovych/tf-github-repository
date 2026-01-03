@@ -20,10 +20,10 @@ variable "repository_visibility" {
   description = "The visibility of the GitOps repository"
 }
 
-variable "branch" {
+variable "default_branch" {
   type        = string
   default     = "main"
-  description = "GitHub branch"
+  description = "GitHub default branch."
 }
 
 variable "public_key_openssh" {
